@@ -1,0 +1,161 @@
+/* =========================
+   RESET
+========================= */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body.admin-body {
+   font-family: Arial, sans-serif;
+   background: #f5f6fa;
+   color: #333;
+   min-height: 100vh;
+}
+
+/* =========================
+   HEADER BUTTONS
+========================= */
+button {
+   cursor: pointer;
+}
+
+/* Logout button */
+button.logout-btn {
+   background: red;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 6px;
+   font-weight: bold;
+}
+
+/* =========================
+   ADMIN BOX (FORM)
+========================= */
+.admin-box {
+   max-width: 450px;
+   margin: 60px auto;
+   background: white;
+   padding: 25px;
+   border-radius: 12px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+   text-align: center;
+}
+
+.admin-box h2,
+.admin-box h3 {
+   margin-bottom: 15px;
+   color: #333;
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+.form-input {
+   width: 100%;
+   padding: 12px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+   font-size: 15px;
+   outline: none;
+   transition: 0.2s;
+}
+
+.form-input:focus {
+   border-color: #667eea;
+   box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* file input */
+.admin-box input[type="file"] {
+   background: white;
+   padding: 10px;
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+.auth-btn {
+   width: 100%;
+   padding: 12px;
+   background: #667eea;
+   color: white;
+   border: none;
+   border-radius: 6px;
+   font-size: 16px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.auth-btn:hover {
+   background: #5563d6;
+   transform: scale(1.02);
+}
+
+/* =========================
+   MESSAGE TEXT
+========================= */
+#msg {
+   margin-top: 10px;
+   font-size: 14px;
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+.products-container {
+   padding: 20px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   gap: 20px;
+}
+
+/* PRODUCT CARD */
+.product {
+   background: white;
+   padding: 15px;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   transition: 0.2s;
+}
+
+.product:hover {
+   transform: translateY(-5px);
+}
+
+/* PRODUCT IMAGE */
+.product img {
+   width: 100%;
+   height: 150px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+/* PRODUCT TEXT */
+.product h3 {
+   margin: 10px 0 5px;
+}
+
+.product p {
+   color: #667eea;
+   font-weight: bold;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+   .admin-box {
+      margin: 30px 15px;
+      padding: 20px;
+   }
+   
+   .products-container {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   }
+}

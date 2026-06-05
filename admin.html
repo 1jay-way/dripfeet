@@ -1,0 +1,49 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body class="admin-body">
+
+<!-- HEADER -->
+<header style="display:flex;justify-content:flex-start;align-items:center;padding:15px;background:#667eea;color:white;">
+    <h2>Admin Dashboard</h2>
+</header>
+
+<!-- PRODUCT FORM -->
+<div class="admin-box">
+
+    <h3>Add Product</h3>
+
+    <input type="text" id="name" placeholder="Product Name" class="form-input">
+    <input type="number" id="price" placeholder="Price" class="form-input">
+
+    <!-- NEW: optional description field -->
+    <input type="text" id="description" placeholder="Description (optional)" class="form-input">
+
+    <input type="file" id="image" class="form-input">
+
+    <button onclick="addProduct()" class="auth-btn">
+        Add Product
+    </button>
+
+</div>
+
+<!-- PRODUCTS LIST -->
+<h3 style="text-align:center;margin-top:20px;">Your Products</h3>
+<div id="admin-products" class="products-container"></div>
+
+       <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+       <script src="admin.js"></script>
+
+</body>
+</html>
+
+  
